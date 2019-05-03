@@ -14,8 +14,10 @@ import by.training.text.vocabulary.interfaces.Vocabulary;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Objects;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 
 public class VocabularyDefault implements Vocabulary, TextProcessor {
 
@@ -31,9 +33,10 @@ public class VocabularyDefault implements Vocabulary, TextProcessor {
 
     private String validDigitsPrefixes;
 
-    private String newParagraph = "\n";
+    private String newParagraph;
 
     public VocabularyDefault() {
+        newParagraph = "(?m)(?=^\\s{4})";// "\n";
         this.punctuationsMarks = ".!?\",()";
         this.endSentencePunctuationMarks = ".?!";
         this.alphabet = "abcdefghijklmnopqrstuvwxyz";
@@ -172,16 +175,17 @@ public class VocabularyDefault implements Vocabulary, TextProcessor {
 
     @Override
     public List<Paragraph> getParagraphs(String text) {
-        var ret = new ArrayList<Paragraph>();
-        Matcher matcher = Pattern.compile("[" + newParagraph + "]").matcher(text);
-        while (matcher.find()) {
-            try {
-                var buf = matcher.group(1);
-                ret.add(new Paragraph(buf, this, this));
-            } catch (IllegalTextUnitTypeException e) {
-
-            }
-        }
-        return ret;
+        return Arrays.stream(text.split(newParagraph))
+                .map((parag) -> {
+                            try {
+                                return new Paragraph(parag, this, this);
+                            } catch (IllegalTextUnitTypeException e) {
+                                e.printStackTrace();
+                                return null;
+                            }
+                        }
+                )
+                .filter(paragraph -> paragraph != null)
+                .collect(Collectors.toList());
     }
 }

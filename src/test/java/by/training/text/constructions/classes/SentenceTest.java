@@ -11,7 +11,6 @@ public class SentenceTest {
 
     VocabularyDefault vocabulary;
 
-
     @Before
     public void init(){
         vocabulary = new VocabularyDefault();
@@ -19,7 +18,6 @@ public class SentenceTest {
 
     @Test
     public void setText() {
-        var vocabulary = new VocabularyDefault();
         try {
 
             var sentence = new Sentence("Hello!", vocabulary, vocabulary);

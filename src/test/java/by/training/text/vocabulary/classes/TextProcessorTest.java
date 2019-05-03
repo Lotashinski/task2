@@ -1,13 +1,10 @@
 package by.training.text.vocabulary.classes;
 
+import by.training.text.constructions.classes.Text;
 import by.training.text.vocabulary.interfaces.TextProcessor;
 import by.training.text.vocabulary.interfaces.Vocabulary;
 import org.junit.Before;
 import org.junit.Test;
-
-import java.util.Arrays;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 import static org.junit.Assert.*;
 
@@ -42,16 +39,31 @@ public class TextProcessorTest {
     }
 
     @Test
-    public void getParagraphs(){
+    public void getParagraphs() {
 
         var firstParagraph = "First paragraph!";
         var secondParagraph = "Second paragraph.";
 
         var paragraphs = textProcessor.getParagraphs(firstParagraph + "\n" + secondParagraph);
 
-        assertTrue(paragraphs.get(0).equals(firstParagraph));
-        assertTrue(paragraphs.get(1).equals(secondParagraph));
+        assertTrue(paragraphs.get(0).getText().equals(firstParagraph));
+        assertTrue(paragraphs.get(1).getText().equals(secondParagraph));
+    }
 
+    @Test
+    public void getText() {
 
-     }
+        var inputText =
+               "Hello! World!";
+        try {
+            Text text = new Text(inputText, (Vocabulary) textProcessor, textProcessor);
+
+            System.out.println(inputText);
+            System.out.println(text.getText());
+
+            assertTrue(inputText.equals(text.getText()));
+        } catch (Exception e) {
+            assert false;
+        }
+    }
 }

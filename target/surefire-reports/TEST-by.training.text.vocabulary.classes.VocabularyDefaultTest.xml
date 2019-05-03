@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="by.training.text.vocabulary.classes.VocabularyDefaultTest" time="0.001" tests="5" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="by.training.text.vocabulary.classes.VocabularyDefaultTest" time="0.013" tests="5" errors="0" skipped="0" failures="0">
   <properties>
     <property name="sun.desktop" value="gnome"/>
     <property name="awt.toolkit" value="sun.awt.X11.XToolkit"/>
@@ -16,7 +16,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="US"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-11-openjdk-amd64/lib"/>
-    <property name="sun.java.command" value="/home/alexander/work/java/task2/target/surefire/surefirebooter14353606171537418630.jar /home/alexander/work/java/task2/target/surefire 2019-05-03T09-41-46_904-jvmRun1 surefire10034384541149541049tmp surefire_07017740043376347163tmp"/>
+    <property name="sun.java.command" value="/home/alexander/work/java/task2/target/surefire/surefirebooter1374822449281087062.jar /home/alexander/work/java/task2/target/surefire 2019-05-03T15-46-49_751-jvmRun1 surefire10309284253279821987tmp surefire_04265606095258173368tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/home/alexander/work/java/task2/target/test-classes:/home/alexander/work/java/task2/target/classes:/home/alexander/.m2/repository/junit/junit/4.11/junit-4.11.jar:/home/alexander/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/alexander/.m2/repository/org/apache/logging/log4j/log4j-api/2.11.2/log4j-api-2.11.2.jar:/home/alexander/.m2/repository/org/apache/logging/log4j/log4j-core/2.11.2/log4j-core-2.11.2.jar:/home/alexander/.m2/repository/org/jetbrains/annotations/17.0.0/annotations-17.0.0.jar:"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -32,7 +32,7 @@
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="/home/alexander/work/java/task2/target/surefire/surefirebooter14353606171537418630.jar"/>
+    <property name="surefire.real.class.path" value="/home/alexander/work/java/task2/target/surefire/surefirebooter1374822449281087062.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="11.0.2+9-Ubuntu-3ubuntu118.04.3"/>
     <property name="user.name" value="alexander"/>
@@ -57,7 +57,7 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="55.0"/>
   </properties>
-  <testcase name="isLetter" classname="by.training.text.vocabulary.classes.VocabularyDefaultTest" time="0"/>
+  <testcase name="isLetter" classname="by.training.text.vocabulary.classes.VocabularyDefaultTest" time="0.012"/>
   <testcase name="isValidWordSymbol" classname="by.training.text.vocabulary.classes.VocabularyDefaultTest" time="0"/>
   <testcase name="isPunctuationMark" classname="by.training.text.vocabulary.classes.VocabularyDefaultTest" time="0"/>
   <testcase name="isValidWord" classname="by.training.text.vocabulary.classes.VocabularyDefaultTest" time="0"/>
