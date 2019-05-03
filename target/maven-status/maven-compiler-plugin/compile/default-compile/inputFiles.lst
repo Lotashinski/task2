@@ -1,0 +1,16 @@
+/home/alexander/work/java/task2/src/main/java/by/training/text/vocabulary/interfaces/Vocabulary.java
+/home/alexander/work/java/task2/src/main/java/by/training/text/vocabulary/interfaces/TextProcessor.java
+/home/alexander/work/java/task2/src/main/java/by/training/text/units/classes/Word.java
+/home/alexander/work/java/task2/src/main/java/by/training/text/constructions/classes/Paragraph.java
+/home/alexander/work/java/task2/src/main/java/by/training/text/vocabulary/classes/VocabularyDefault.java
+/home/alexander/work/java/task2/src/main/java/by/training/App.java
+/home/alexander/work/java/task2/src/main/java/by/training/text/units/classes/AbstractUnit.java
+/home/alexander/work/java/task2/src/main/java/by/training/text/constructions/classes/Sentence.java
+/home/alexander/work/java/task2/src/main/java/by/training/text/constructions/classes/Text.java
+/home/alexander/work/java/task2/src/main/java/by/training/text/units/classes/PunctuationMark.java
+/home/alexander/work/java/task2/src/main/java/by/training/text/vocabulary/exceptions/TextFormatException.java
+/home/alexander/work/java/task2/src/main/java/by/training/text/constructions/interfaces/ConstructUnit.java
+/home/alexander/work/java/task2/src/main/java/by/training/text/units/exceptions/IllegalTextUnitTypeException.java
+/home/alexander/work/java/task2/src/main/java/by/training/text/units/interfaces/TextUnit.java
+/home/alexander/work/java/task2/src/main/java/by/training/text/constructions/classes/AbstractConstruct.java
+/home/alexander/work/java/task2/src/main/java/by/training/text/units/classes/Numeric.java

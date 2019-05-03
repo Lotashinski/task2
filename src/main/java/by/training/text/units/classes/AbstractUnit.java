@@ -1,21 +1,26 @@
 package by.training.text.units.classes;
 
-import by.training.text.alphabet.interfaces.Alphabet;
+import by.training.text.vocabulary.interfaces.Vocabulary;
 import by.training.text.units.exceptions.IllegalTextUnitTypeException;
 import by.training.text.units.interfaces.TextUnit;
 
 public abstract class AbstractUnit implements TextUnit {
 
-    private Alphabet alphabet;
+    private Vocabulary vocabulary;
 
-    public AbstractUnit(Alphabet alphabet) {
+    public AbstractUnit(Vocabulary vocabulary) {
 
-        this.alphabet = alphabet;
+        this.vocabulary = vocabulary;
     }
 
-    public Alphabet getAlphabet() {
-        return alphabet;
+    public Vocabulary getVocabulary() {
+        return vocabulary;
     }
 
     public abstract void setText(String text) throws IllegalTextUnitTypeException;
+
+    @Override
+    public boolean equals(TextUnit unit) {
+        return getText().equals(unit.getText());
+    }
 }

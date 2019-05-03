@@ -1,24 +1,23 @@
 package by.training.text.units.classes;
 
-
-import by.training.text.vocabulary.interfaces.Vocabulary;
 import by.training.text.units.exceptions.IllegalTextUnitTypeException;
+import by.training.text.vocabulary.interfaces.Vocabulary;
 
 import java.util.Optional;
 
-public class PunctuationMark extends AbstractUnit {
+public class Numeric extends AbstractUnit {
 
     private String text;
 
-    public PunctuationMark(String text, Vocabulary vocabulary) throws IllegalTextUnitTypeException {
+    public Numeric(String text, Vocabulary vocabulary) throws IllegalTextUnitTypeException {
         super(vocabulary);
         setText(text);
     }
 
     @Override
     public void setText(String text) throws IllegalTextUnitTypeException {
-        if (text.length() == 0 || !this.getVocabulary().isPunctuationMark(text))
-            throw new IllegalTextUnitTypeException("illegal input text");
+        if (!getVocabulary().isNumeric(text))
+            throw new IllegalTextUnitTypeException("is not numeric: " + text);
         this.text = text;
     }
 
